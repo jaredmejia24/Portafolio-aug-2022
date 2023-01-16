@@ -2,7 +2,7 @@
   "name": "portafolio-aug-2022",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "Server/server.js",
   "scripts": {
     "install:client": "cd Client && npm install",
     "install:server": "cd Server && npm install",
@@ -11,11 +11,11 @@
     "start:server": "npm run start --prefix Server",
     "start:app": "npm-run-all --parallel start:server start:client",
     "build:client": "cd Client && npm run build",
-    "start:app:prod": "cd Server && npm run start:prod",
+    "start": "cd Server && npm run start:prod",
     "install:build:app": "npm i && npm-run-all install:app"
   },
   "engines": {
-    "node": "16.x"
+    "node": "16.x.x"
   },
   "repository": {
     "type": "git",

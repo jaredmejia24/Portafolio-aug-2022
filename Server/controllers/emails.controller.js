@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 //utils
 const { catchAsync } = require("../utils/catchAsync.util");
 
-dotenv.config({ path: "./config.env" });
+dotenv.config();
 
 const sendEmail = catchAsync(async (req, res) => {
   const { title, message, email } = req.body;

@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 // Utils
 const { AppError } = require('../utils/appError.util');
 
-dotenv.config({ path: './config.env' });
+dotenv.config();
 
 const sendErrorDev = (error, req, res) => {
 	res.status(error.statusCode).json({

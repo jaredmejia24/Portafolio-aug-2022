@@ -7,7 +7,7 @@ const path = require("path");
 
 const dotenv = require("dotenv");
 
-dotenv.config({ path: "./config.env" });
+dotenv.config();
 
 // Routers
 const { emailsRouter } = require("./routes/emails.routes");
