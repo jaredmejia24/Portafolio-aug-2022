@@ -33,9 +33,12 @@ var options = {
 app.use(express.static("dist", options));
 
 app.use(
-  helmet({
-    contentSecurityPolicy: false,
-  })
+  helmet(
+    {
+      contentSecurityPolicy: false,
+    },
+    { crossOriginOpenerPolicy: { policy: "unsafe-none" } }
+  )
 );
 
 app.use(compression());
