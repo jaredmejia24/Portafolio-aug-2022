@@ -1,5 +1,5 @@
 const express = require("express");
-/* const helmet = require("helmet"); */
+const helmet = require("helmet");
 const compression = require("compression");
 const morgan = require("morgan");
 const cors = require("cors");
@@ -32,14 +32,14 @@ var options = {
 
 app.use(express.static("dist", options));
 
-/* app.use(
+app.use(
   helmet(
     {
       contentSecurityPolicy: false,
     },
     { crossOriginOpenerPolicy: { policy: "unsafe-none" } }
   )
-); */
+);
 
 app.use(compression());
 
