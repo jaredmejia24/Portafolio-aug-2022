@@ -21,16 +21,7 @@ const app = express();
 // Enable Express app to receive JSON data
 app.use(express.json());
 
-var options = {
-  dotfiles: "ignore",
-  etag: false,
-  extensions: ["htm", "html", "css", "js", "ico", "jpg", "jpeg", "png", "svg"],
-  index: ["index.html"],
-  maxAge: "1m",
-  redirect: false,
-};
-
-app.use(express.static("dist", options));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(
   helmet(
@@ -56,7 +47,7 @@ app.use("/api/v1/emails", emailsRouter);
 app.use(globalErrorHandler);
 
 app.use("/", (req, res, next) => {
-  const indexPath = path.join(__dirname, "dist", "index.html");
+  const indexPath = path.join(__dirname, "public", "index.html");
 
   res.status(200).sendFile(indexPath);
 });
