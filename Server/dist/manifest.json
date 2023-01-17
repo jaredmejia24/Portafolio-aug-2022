@@ -1,0 +1,32 @@
+{
+  "index.html": {
+    "file": "assets/index.cbcde54f.js",
+    "src": "index.html",
+    "isEntry": true,
+    "css": [
+      "assets/index.e740a73a.css"
+    ],
+    "assets": [
+      "assets/Jared Mejia CV.2cdfc185.pdf",
+      "assets/heroimage.27dd6918.jpg",
+      "assets/proyecto e-commerce.a3cfff10.png",
+      "assets/proyecto pokedex.d244d921.png",
+      "assets/project CRUD.997a32be.png",
+      "assets/proyecto rick and morty.6bdfc837.png",
+      "assets/js.b754ca95.png",
+      "assets/html.bc69e85d.png",
+      "assets/css.16bc81ff.png",
+      "assets/react.d3a65832.png",
+      "assets/redux.4908f51d.png",
+      "assets/react router.0af59cb4.png",
+      "assets/bootsrap.2a4cd402.png",
+      "assets/taliwind.8f456613.png",
+      "assets/github.d83ddf4e.png",
+      "assets/node js.f765a9a4.png",
+      "assets/sequelize.660f0334.png",
+      "assets/express.3bc3c944.png",
+      "assets/Typescript.19ba8ef6.png",
+      "assets/prisma.9f085ad5.png"
+    ]
+  }
+}
