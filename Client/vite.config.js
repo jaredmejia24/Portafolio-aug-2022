@@ -10,5 +10,5 @@ export default defineConfig({
     emptyOutDir: true,
     manifest: true
   },
-  base: "http://34.23.43.159:4000/",
+  base: "/34.23.43.159/",
 });
