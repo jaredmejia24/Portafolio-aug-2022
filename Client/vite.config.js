@@ -8,7 +8,6 @@ export default defineConfig({
   build: {
     outDir: path.join(__dirname, "../Server/dist"),
     emptyOutDir: true,
-    manifest: true
+    manifest: true,
   },
-  base: "/34.23.43.159/",
 });
