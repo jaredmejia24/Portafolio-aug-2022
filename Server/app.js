@@ -42,11 +42,6 @@ app.use(cors());
 
 // Define endpoints
 app.use("/api/v1/emails", emailsRouter);
-app.use("/ap1/v1/status", (req, res) => {
-  res.status(200).json({
-    status: "the server is running",
-  });
-});
 
 // Global error handler
 app.use(globalErrorHandler);

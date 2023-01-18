@@ -25,7 +25,7 @@ const sendEmail = catchAsync(async (req, res) => {
     to: "jaredmejia4440@gmail.com", // list of receivers
     subject: title, // Subject line
     text: message,
-    html: `<b>${message}</b>` // plain text body
+    html: `<b>${message}</b>`, // plain text body
   };
 
   // send mail with defined transport object
@@ -41,4 +41,10 @@ const sendEmail = catchAsync(async (req, res) => {
   res.send("Email sent!");
 });
 
-module.exports = { sendEmail };
+const status = (req, res) => {
+  res.status(200).json({
+    status: "the server is running",
+  });
+};
+
+module.exports = { sendEmail, status };

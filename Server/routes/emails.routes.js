@@ -1,7 +1,7 @@
 const express = require("express");
 
 //controllers
-const { sendEmail } = require("../controllers/emails.controller");
+const { sendEmail, status } = require("../controllers/emails.controller");
 //validators
 const {
   sendEmailValidators,
@@ -10,5 +10,7 @@ const {
 const emailsRouter = express.Router();
 
 emailsRouter.post("/", sendEmailValidators, sendEmail);
+
+emailsRouter.get("/", status)
 
 module.exports = { emailsRouter };
