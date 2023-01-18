@@ -47,4 +47,14 @@ const status = (req, res) => {
   });
 };
 
-module.exports = { sendEmail, status };
+const verify = (req, res) => {
+  const { title, message, email } = req.body;
+
+  res.status(200).json({
+    title,
+    message,
+    email,
+  });
+};
+
+module.exports = { sendEmail, status, verify };
