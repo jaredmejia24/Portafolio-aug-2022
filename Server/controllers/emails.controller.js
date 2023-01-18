@@ -13,6 +13,7 @@ const sendEmail = catchAsync(async (req, res) => {
   let transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
     port: 587,
+    secure: false,
     // true for 465, false for other ports
     auth: {
       user: process.env.EMAIL_USER, // generated ethereal user
@@ -21,10 +22,11 @@ const sendEmail = catchAsync(async (req, res) => {
   });
 
   const msg = {
-    from: email, // sender address
+    from: "jaredmejia4440@gmail.com", // sender address
     to: "jaredmejia4440@gmail.com", // list of receivers
     subject: title, // Subject line
-    text: message, // plain text body
+    text: message,
+    html: `<b>${message}</b>` // plain text body
   };
 
   // send mail with defined transport object
