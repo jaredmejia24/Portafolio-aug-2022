@@ -9,7 +9,7 @@ const {
 
 const emailsRouter = express.Router();
 
-emailsRouter.post("/", sendEmailValidators, sendEmail);
+emailsRouter.post("/", sendEmail);
 
 emailsRouter.get("/", status)
 
